@@ -36,4 +36,8 @@ app.get('/fruits', (req, res) => {
     res.send(veggies[req.params.id])
   })
 
+  app.get('*', (req, res) => {
+    res.send('404 Not Found')
+  })
+  
   app.listen(PORT, () => console.log(`Serving up delicious fruits on port ${PORT} 🍒`))
